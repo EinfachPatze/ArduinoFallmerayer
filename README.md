@@ -6,6 +6,7 @@ Willkommen in meinem Arduino-Projekt-Repository! Hier findest du eine Sammlung v
 ## Voraussetzungen
 
 Alle Projekte wurden ausschließlich auf einem **Arduino Uno** getestet. Ich kann daher nicht garantieren, dass sie ohne Anpassungen auf anderen Arduino-Modellen oder Mikrocontrollern funktionieren.
+Die verwendeten Pins müssen an Ihr Projekt angepasst werden
 
 ### Benötigte Software
 - **Arduino IDE**: Zum Hochladen der Sketche auf den Arduino Uno
