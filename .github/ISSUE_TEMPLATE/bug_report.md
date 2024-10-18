@@ -7,8 +7,6 @@ assignees: ''
 
 ---
 
-### Fehlerberichte und Rückmeldungen zum Arduino Uno Code
-
 Wenn du beim Verwenden des **Arduino Uno** Fehler im Code oder unerwartetes Verhalten feststellst, bitten wir dich, einen detaillierten Fehlerbericht zu erstellen. Dein Feedback hilft uns, die Software zu verbessern und Probleme effizient zu lösen. 
 
 Bitte füge deinem Bericht folgende Informationen bei:
