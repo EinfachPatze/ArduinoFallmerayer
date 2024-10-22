@@ -4,18 +4,22 @@ bool isPrime(int num) {
   if (num <= 1) {
     return false;
   }
-  if (num == 2) {
+  if (num <= 3) {
     return true;
   }
-  if (num % 2 == 0) {
+  if (num % 2 == 0 || num % 3 == 0) {
     return false;
   }
 
-  int limit = (int)sqrt(num);
-  
-  // Check for factors from 3 to sqrt(num)
-  for (int i = 3; i <= limit; i += 2) {
-    if (num % i == 0) {
+  int limit = 1;
+  while (limit * limit <= num) {
+    limit++;
+  }
+  limit--;
+
+  // Check for factors from 5 to sqrt(num) with step of 6
+  for (int i = 5; i <= limit; i += 6) {
+    if (num % i == 0 || num % (i + 2) == 0) {
       return false;
     }
   }
@@ -34,13 +38,10 @@ void loop() {
     if (Serial.read() == '\n') {
       Serial.print(i);
       if (isPrime(i)) {
-        Serial.println(" is prime.");
+        Serial.println(" is a prime number.");
       } else {
-        Serial.println(" is not prime.");
+        Serial.println(" is not a prime number.");
       }
-    } else {
-      Serial.println("Invalid input. Please enter an integer.");
     }
   }
-  delay(300);
 }
