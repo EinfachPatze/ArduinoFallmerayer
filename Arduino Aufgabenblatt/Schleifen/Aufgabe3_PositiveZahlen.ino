@@ -6,7 +6,7 @@ void setup() {
 void loop() {
   // Überprüfen, ob Daten verfügbar sind
   if (Serial.available() > 0) {
-    unsigned long long int zahl = Serial.parseInt(); // Lese die eingegebene Zahl
+    unsigned long int zahl = Serial.parseInt(); // Lese die eingegebene Zahl
 
     // Überprüfen, ob die Zahl negativ ist
     if (zahl < 0) {
