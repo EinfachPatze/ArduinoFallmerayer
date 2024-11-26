@@ -21,31 +21,31 @@ void loop() {
   while (Serial.available() == 0) {}
   operatorInput = Serial.read();
 
-  // Operator überprüfen und Berechnung durchführen
+  //Berechnung durchführen
   switch (operatorInput) {
     case '+':
       ergebnis = zahl1 + zahl2;
-      Serial.println("Ergebnis: " + String(ergebnis)); // Ausgabe des Ergebnisses
+      Serial.println("Ergebnis: " + String(ergebnis)); 
       break;
     case '-':
       ergebnis = zahl1 - zahl2;
-      Serial.println("Ergebnis: " + String(ergebnis)); // Ausgabe des Ergebnisses
+      Serial.println("Ergebnis: " + String(ergebnis)); 
       break;
     case '*':
       ergebnis = zahl1 * zahl2;
-      Serial.println("Ergebnis: " + String(ergebnis)); // Ausgabe des Ergebnisses
+      Serial.println("Ergebnis: " + String(ergebnis)); 
       break;
     case '/':
       if (zahl2 != 0) {
         ergebnis = zahl1 / zahl2;
-        Serial.println("Ergebnis: " + String(ergebnis)); // Ausgabe des Ergebnisses
+        Serial.println("Ergebnis: " + String(ergebnis)); 
       } else {
-        Serial.println("Division durch Null ist nicht erlaubt!"); // Fehler bei Division durch 0
+        Serial.println("Division durch Null ist nicht erlaubt!"); 
       }
       break;
     default:
-      Serial.println("Unbekannter Operator!"); // Fehler bei falschem Operator
+      Serial.println("Unbekannter Operator!"); 
       break;
   }
-  delay(5000); // Kurze Pause vor dem nächsten Durchlauf
+  delay(5000); //Pause nächsten Durchlauf
 }

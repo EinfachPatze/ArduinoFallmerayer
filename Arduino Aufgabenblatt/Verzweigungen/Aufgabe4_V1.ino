@@ -35,7 +35,7 @@ void setup() {
   int ageMonths = currentMonth - birthMonth;
   int ageDays = currentDay - birthDay;
 
-  // Überprüfen, ob der Geburtstag in diesem Jahr schon war
+  
   if (ageDays < 0) {
     ageMonths--;
     ageDays += 30; // Annahme: 30 Tage pro Monat
@@ -57,5 +57,5 @@ void setup() {
 }
 
 void loop() {
-  // Nichts zu tun in der loop-Funktion
+  
 }

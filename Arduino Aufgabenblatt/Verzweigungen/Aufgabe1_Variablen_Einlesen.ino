@@ -3,7 +3,7 @@ void setup() {
 }
 
 void loop() {
-  // Schritt 1: Lies eine Ganzzahl, eine Kommazahl und einen Namen ein
+  //Daten einlesen
   Serial.println("Gib eine Ganzzahl ein:");
   while (Serial.available() == 0) {} // Warten auf Eingabe
   int num = Serial.parseInt();
@@ -18,12 +18,12 @@ void loop() {
   while (Serial.available() == 0) {}
   String name = Serial.readString();
 
-  // Schritt 2: Gib die ursprünglichen Werte aus
+  // ursprünglichen Werte ausgeben
   Serial.println(num);
   Serial.println(decimal);
   Serial.println(name);
 
-  // Schritt 3: Werte verändern und erneut ausgeben
+  //Werte verändern und neu ausgeben
   Serial.println(num * 2);    // Verdopple die Ganzzahl
   Serial.println(decimal / 2); // Halbiere die Kommazahl
   Serial.println("Hallo " + name); // Begrüße den Benutzer
