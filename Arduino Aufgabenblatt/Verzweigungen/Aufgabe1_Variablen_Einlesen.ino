@@ -28,5 +28,5 @@ void loop() {
   Serial.println(decimal / 2); // Halbiere die Kommazahl
   Serial.println("Hallo " + name); // Begrüße den Benutzer
 
-  delay(10000); // Kurze Pause, damit der Benutzer die Ausgabe sieht
+  delay(10000); // Kurze Pause
 }
