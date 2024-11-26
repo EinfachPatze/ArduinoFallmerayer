@@ -36,7 +36,7 @@ void setup() {
     // Keine reellen Lösungen, sondern zwei komplexe Lösungen
     double realPart = -b / (2 * a);
     double imaginaryPart = sqrt(-discriminant) / (2 * a);
-    Serial.println("Die Gleichung hat keine reellen Lösungen, sondern zwei komplexe Lösungen:");
+    Serial.println("Die Gleichung hat zwei komplexe Lösungen:");
     Serial.print("x1 = ");
     Serial.print(realPart);
     Serial.print(" + ");
@@ -55,21 +55,16 @@ void loop() {
 }
 
 void getInput() {
-  // Warten auf Eingabe von a
-  Serial.print("a: ");
-  while (Serial.available() == 0) {}  // Warten bis eine Eingabe gemacht wird
+  while (Serial.available() == 0) {
+    // Warten auf Eingabe
+  }
   a = Serial.parseFloat();
-  Serial.println(a);
-  
-  // Warten auf Eingabe von b
-  Serial.print("b: ");
-  while (Serial.available() == 0) {}  // Warten bis eine Eingabe gemacht wird
+  while (Serial.available() == 0) {
+    // Warten auf Eingabe
+  }
   b = Serial.parseFloat();
-  Serial.println(b);
-  
-  // Warten auf Eingabe von c
-  Serial.print("c: ");
-  while (Serial.available() == 0) {}  // Warten bis eine Eingabe gemacht wird
+  while (Serial.available() == 0) {
+    // Warten auf Eingabe
+  }
   c = Serial.parseFloat();
-  Serial.println(c);
 }
