@@ -3,7 +3,7 @@ void setup() {
 }
 
 void loop() {
-  int height, age;
+  unsigned long long int height, age;
 
   // Höhe des Baums einlesen
   Serial.println("Gib die Höhe des Baums ein (in Metern):");

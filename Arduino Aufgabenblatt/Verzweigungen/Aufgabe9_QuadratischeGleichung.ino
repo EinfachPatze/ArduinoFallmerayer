@@ -59,6 +59,10 @@ void getInput() {
     // Warten auf Eingabe
   }
   a = Serial.parseFloat();
+  if(a==0){
+    Serial.println("a darf nicht 0 sein.");
+    getInput();
+  }
   while (Serial.available() == 0) {
     // Warten auf Eingabe
   }
