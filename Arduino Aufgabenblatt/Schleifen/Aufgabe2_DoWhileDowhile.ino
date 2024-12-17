@@ -1,6 +1,6 @@
 void setup() {
   Serial.begin(9600); // Initialisiere die serielle Kommunikation
-  Serial.println("Geben Sie die Werte für a und b ein (z.B. 3 5):");
+  Serial.println("Geben Sie die Werte fuer a und b ein (z.B. 3 5):");
 }
 
 void loop() {
@@ -67,10 +67,10 @@ void loop() {
       Serial.print("Produkt (do...while): ");
       Serial.println(productDoWhile);
     } else {
-      Serial.println("Fehler: Beide Werte müssen positive Ganzzahlen sein."); // Fehlermeldung
+      Serial.println("Fehler: Beide Werte muessen positive Ganzzahlen sein."); // Fehlermeldung
     }
 
     delay(5000); // Warte 5 Sekunden vor der nächsten Eingabe
-    Serial.println("Geben Sie die Werte für a und b erneut ein (z.B. 3 5):");
+    Serial.println("Geben Sie die Werte fuer a und b erneut ein (z.B. 3 5):");
   }
 }
