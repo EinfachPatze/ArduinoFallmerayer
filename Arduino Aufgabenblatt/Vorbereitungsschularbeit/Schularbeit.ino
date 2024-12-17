@@ -1,7 +1,7 @@
 int operation;
 int licht = 0; // 0 = aus, 1 = an
 
-void setup() {
+void  setup() {
     Serial.begin(9600);
 }
 
@@ -13,7 +13,7 @@ void lichtschalter() {
     if (an_aus == 1) {
         if (licht == 1) {
             Serial.println("Licht ist bereits an.");
-            delay(1000);
+            delay(1000); 
         } else {
             licht = 1;
             Serial.println("Licht ist an.");
@@ -43,6 +43,7 @@ void anzahlNegativer(int zahlen[], int size) {
     Serial.println("Du hast " + String(neg) + " negative Zahlen eingegeben.");
     delay(1000);
 }
+
 
 void even(int zahl) {
     int erg = zahl % 2;
