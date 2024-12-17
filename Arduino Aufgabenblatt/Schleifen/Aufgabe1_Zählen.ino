@@ -7,10 +7,10 @@ void loop() {
   if (Serial.available() > 0) {
     int zahl = Serial.parseInt();
     if (zahl == 0) {
-      Serial.println("Das war keine gültige Zahl. Bitte geben Sie eine Zahl ein:");
+      Serial.println("Das war keine gueltige Zahl. Bitte geben Sie eine Zahl ein:");
       return;
     }
-    Serial.print("Zähle bis ");
+    Serial.print("Zaehle bis ");
     Serial.println(zahl);
     
     String output = "";
