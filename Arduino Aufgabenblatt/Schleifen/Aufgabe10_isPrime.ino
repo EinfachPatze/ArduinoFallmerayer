@@ -11,14 +11,8 @@ bool isPrime(int num) {
     return false;
   }
 
-  int limit = 1;
-  while (limit * limit <= num) {
-    limit++;
-  }
-  limit--;
-
   // Check for factors from 5 to sqrt(num) with step of 6
-  for (int i = 5; i <= limit; i += 6) {
+  for (int i = 5; i * i <= num; i += 6) {
     if (num % i == 0 || num % (i + 2) == 0) {
       return false;
     }
@@ -34,14 +28,12 @@ void setup() {
 
 void loop() {
   if (Serial.available() > 0) {
-    int i = Serial.parseInt();
-    if (Serial.read() == '\n') {
-      Serial.print(i);
-      if (isPrime(i)) {
-        Serial.println(" is a prime number.");
-      } else {
-        Serial.println(" is not a prime number.");
-      }
+    int i = Serial.parseInt(); 
+    Serial.print(i);
+    if (isPrime(i)) {
+      Serial.println(" is a prime number.");
+    } else {
+      Serial.println(" is not a prime number.");
     }
   }
 }
