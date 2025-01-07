@@ -16,21 +16,21 @@ void loop() {
 }
 
 void generiereFolgen(int anzahl) {
-  Serial.println("Folge 1: -5, -2, 1, 4, 7, 10, ...");
+  Serial.println("Folge 1: -5, -2, 1, 4, 7, 10, ..."); // a_n = 3n - 8
   for (int i = 0; i < anzahl; i++) {
     Serial.print(-5 + i * 3);
     Serial.print(", ");
   }
   Serial.println();
 
-  Serial.println("Folge 2: 1, 2, 4, 8, 16, ...");
+  Serial.println("Folge 2: 1, 2, 4, 8, 16, ..."); // a_n = 2^(n-1)
   for (int i = 0; i < anzahl; i++) {
     Serial.print(pow(2, i));
     Serial.print(", ");
   }
   Serial.println();
 
-  Serial.println("Folge 3: 3, 4, 6, 10, 18, ...");
+  Serial.println("Folge 3: 3, 4, 6, 10, 18, ..."); // a_n = 2^(n-1)+2 
   int previous = 3;
   Serial.print(previous);
   for (int i = 1; i < anzahl; i++) {
@@ -48,7 +48,7 @@ void generiereFolgen(int anzahl) {
   }
   Serial.println();
 
-  Serial.println("Folge 4: 1, 2, 4, 7, 11, ...");
+  Serial.println("Folge 4: 1, 2, 4, 7, 11, ..."); // a_n = (n^2-n+2)/2
   int nextValue = 1;
   Serial.print(nextValue);
   for (int i = 1; i < anzahl; i++) {
