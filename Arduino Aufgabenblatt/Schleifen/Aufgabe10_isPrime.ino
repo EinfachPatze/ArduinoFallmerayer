@@ -21,6 +21,20 @@ bool isPrime(int num) {
   return true;
 }
 
+int n_te_primzahl(int n) {
+  int count = 0;
+  int i = 2;
+  while (true) {
+    if (isPrime(i)) {
+      count++;
+      if (count == n) {
+        return i;
+      }
+    }
+    i++;
+  }
+}
+
 void setup() {
   Serial.begin(9600);
   Serial.println("Enter a number to see if it's a prime:");
